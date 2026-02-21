@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 20% 35%, #7719738e, transparent 40%),
+    radial-gradient(circle at 60% 70%, #000000, transparent 40%), #000000;
+}
+
+/* CARD */
+.card {
+  background: rgba(0, 0, 0, 0.191);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid rgb(255, 0, 187);
+  box-shadow:
+    0 2px 50px rgba(255, 0, 200, 0.76),
+    0 0 40px rgb(0, 0, 0);
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* AVATAR */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+  background: linear-gradient(135deg, #6a00ff, #ff00cc);
+  padding: 3px;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 25px rgba(255, 0, 200, 0.7);
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TITLE */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 7px;
+  margin-bottom: 5px;
+}
+
+.nim {
+  font-size: 19px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 1px;
+  background: rgba(45, 44, 45, 0.516);
+  padding: 6px 8px;
+  border-radius: 15px;
+}
+
+.item span {
+  font-size: 20px;
+}
+
+.item small {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.item strong {
+  display: block;
+  font-size: 15px;
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #8e0b0b, #6a00ff);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+/* Hover hanya untuk social */
+.social a:hover {
+  transform: translateY(-2px);
+}
+
+/* Efek ditekan */
+.social a:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgb(255, 255, 255);
+}
+
+/* Instagram Hover */
+.social a.ig:hover {
+  background: linear-gradient(135deg, #0e0100, #d6249f, #ff00d4);
+}
+
+/* WhatsApp Hover */
+.social a.wa:hover {
+  background: linear-gradient(135deg, #0e0100, #d6249f, #ff00d4);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}

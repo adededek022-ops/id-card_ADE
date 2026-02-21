@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ID Card Digital Sarifuddin - Teknik Informatika"
+    />
+    <title>ID Card 3D - Sarifuddin</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="ade.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="avatar" id="avatar">
+        <img src="foto.jpg" alt="Foto Sarifuddin" loading="lazy" />
+      </div>
+
+      <h1>SARIFUDDIN</h1>
+      <div class="nim">NIM : D0225010</div>
+
+      <div class="info">
+        <div class="item">
+          <span>🎂</span>
+          <div>
+            <small>Tanggal Lahir</small>
+            <strong>03 / 03 / 2006</strong>
+          </div>
+        </div>
+
+        <div class="item">
+          <span>🗺️</span>
+          <div>
+            <small>Alamat</small>
+            <strong>Galung Lego</strong>
+          </div>
+        </div>
+
+        <div class="item">
+          <span>🏫</span>
+          <div>
+            <small>Program Studi</small>
+            <strong>Teknik Informatika</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="social">
+  <a
+    href="https://instagram.com/aa_adeee"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="ig"
+  >
+    <i class="fab fa-instagram"></i> Instagram : <i>aa_adee</i>
+  </a>
+
+  <a
+    href="https://wa.me/6282346253471"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa"
+  >
+    <i class="fab fa-whatsapp"></i> WhatsApp : <i>082346253471</i>
+  </a>
+</div>
+
+    <!-- POPUP -->
+    <div id="popupFoto" class="popup">
+      <img src="foto.jpg" alt="Foto Besar" />
+    </div>
+
+    <script>
+      const popup = document.getElementById("popupFoto");
+      const avatar = document.getElementById("avatar");
+
+      avatar.addEventListener("click", () => {
+        popup.classList.add("active");
+      });
+
+      popup.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
